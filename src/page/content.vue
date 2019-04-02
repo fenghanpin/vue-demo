@@ -35,7 +35,7 @@ export default {
     },
     mounted() {
         this.$utils.on('getNumber', this.getNumberData)
-        this.$utils.on('getString', this.getString)
+        // this.$utils.on('getString', this.getString)
     },
     methods: {
         getNumberData(num) {
