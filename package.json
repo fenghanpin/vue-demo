@@ -15,7 +15,8 @@
     "less": "^3.0.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "express": "4.x"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -46,6 +47,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "less-loader": "^4.1.0",
+    "mockjs": "^1.0.1-beta3",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",

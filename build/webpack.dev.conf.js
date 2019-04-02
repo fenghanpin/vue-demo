@@ -10,6 +10,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+// 本地模拟数据 可以设置中间件来响应 HTTP 请求。
+const express = require('express')
+const app = express()
+const apiRoutes = express.Router()
+app.use('/api', apiRoutes) /* use（）注册中间件 ，指定回调函数*/
+const appArr = require('../server/index')
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -42,6 +49,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    before(app) {
+      console.log(app)
+      appArr.forEach(function (appItem) {
+        appItem(app)
+      })
     }
   },
   plugins: [

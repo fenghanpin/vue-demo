@@ -10,18 +10,11 @@
 
 <script>
 export default {
-  name: 'app',
-  data() {
-    return {
-      ISKeep: this.$route.meta.ISKeep
+    name: 'app',
+    data() {
+        return {
+            ISKeep: this.$route.meta.ISKeep
+        }
     }
-  },
-  created() {
-    console.log(this.$route.meta.ISKeep)
-  }
 }
 </script>
-
-<style lang="less">
-
-</style>

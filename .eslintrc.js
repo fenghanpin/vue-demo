@@ -26,6 +26,7 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-tabs':'off',
+    'indent': ['error', 4],
     'space-before-function-paren': ['error', {"anonymous": "always", "named": "never", "asyncArrow": "always"}],//函数定义时括号前面要不要有空格，never不要
     // 'semi': ['error', 'always']//分号
   }
