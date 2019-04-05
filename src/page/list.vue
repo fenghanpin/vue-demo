@@ -27,7 +27,7 @@ export default {
             result.then((res) => {
                 this.list = res.data.data
                 this.$utils.emit('getNumber', res.data.data.length)
-                this.$utils.emit('getString', {str: '234'})
+                // this.$utils.emit('getString', {str: '234'})
             }).catch((err) => {
                 console.log(err)
                 result = null
